@@ -17,7 +17,7 @@ export default function TaskItem({ task, onComplete }: TaskItemProps) {
         </div>
 
         {!task.completed && (
-            <Button onClick={() => onComplete(task.id)}>Complete</Button>
+            <Button onClick={() => onComplete}>Complete</Button>
         )}
       </li>
   )
