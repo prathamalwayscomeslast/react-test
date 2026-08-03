@@ -4,8 +4,8 @@ import TaskList from './components/TaskList'
 import type { Task } from './types'
 
 const initialTasks: Task[] = [
-  { id: 1, title: 'Write BugHunter demo issue', description: '', time: '', completed: false },
-  { id: 2, title: 'Review generated PR', description: '', time: '', completed: false },
+  { id: 1, title: 'Write BugHunter demo issue', description: 'Reproduce the bug and write a clear reproduction case.', time: '', completed: false },
+  { id: 2, title: 'Review generated PR', description: '', time: '', completed: true },
 ]
 
 export default function App() {
@@ -30,18 +30,18 @@ export default function App() {
     )
   }
 
-  const completedCount = tasks.filter((task) => task.completed).length
+  const completedCount = tasks.filter((t) => t.completed).length
 
   return (
     <main className="app-shell">
       <section className="card">
         <div className="header">
           <div>
-            <h1>Mini Task Board</h1>
-            <p>Track tasks and mark them as complete.</p>
+            <h1>Task Board</h1>
+            <p>Add tasks, set due times, and mark them done.</p>
           </div>
           <div className="summary">
-            {completedCount} / {tasks.length} completed
+            {completedCount} / {tasks.length} done
           </div>
         </div>
 
