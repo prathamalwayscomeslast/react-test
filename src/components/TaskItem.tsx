@@ -39,7 +39,7 @@ export default function TaskItem({ task, onComplete }: TaskItemProps) {
           Done
         </span>
       ) : (
-        <Button variant="complete" onClick={() => onComplete(task.id)}>
+        <Button variant="complete" onClick={() => onComplete}>
           Mark done
         </Button>
       )}
